@@ -1,0 +1,42 @@
+body {
+  background: var(--bs-secondary);
+}
+
+.container.container-small {
+  max-width: 700px;
+}
+
+.initials-circle {
+  --size: 3rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+.nav-margin {
+  margin-top: 7rem;
+}
+
+.hero-text {
+  height: 7rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-text {
+    height: 10rem;
+  } 
+}
+
+/* MODAL BELOW("my-modal" instead of "modal" to differentiate from bootstrap) */
+.my-modal-wrapper {
+  z-index: 1031; /* to be atop bs-navbar which has z-index: 1030; */
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #0003;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-modal-wrapper.active {
+  display: flex;
+}
